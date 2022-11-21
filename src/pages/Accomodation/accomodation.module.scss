@@ -113,7 +113,7 @@
     gap: 75px;
     @include mobileMaxBreakPoint {
       flex-direction: column;
-      gap: 20px;
+      gap: 10px;
     }
   }
 }
