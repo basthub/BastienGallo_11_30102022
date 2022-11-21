@@ -1,0 +1,42 @@
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/variables';
+
+.notFound {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+  color: $textColor;
+  & p,
+  Link {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  p:first-child {
+    font-size: 288px;
+    margin-bottom: 0;
+    font-weight: bold;
+    margin-bottom: 60px;
+    @include mobileMaxBreakPoint {
+      font-size: 96px;
+      margin-bottom: 12px;
+    }
+  }
+  p:nth-child(2) {
+    font-size: 36px;
+    margin-bottom: 180px;
+    @include mobileMaxBreakPoint {
+      font-size: 18px;
+      margin-bottom: 135px;
+    }
+  }
+  a {
+    color: $textColor;
+    border-bottom: 1px solid $primaryColor;
+    font-size: 18px;
+    @include mobileMaxBreakPoint {
+      font-size: 14px;
+    }
+  }
+}

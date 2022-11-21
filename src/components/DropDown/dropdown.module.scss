@@ -1,0 +1,44 @@
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/variables';
+
+.dropdown {
+  width: 100%;
+  max-width: 1024px;
+  margin: 15px auto;
+  font-size: 24px;
+  font-weight: 500;
+  header {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    background-color: $primaryColor;
+    color: $textLightColor;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 47px;
+    border-radius: 5px;
+    padding: 16px;
+    font-weight: 500;
+    font-size: 18px;
+    @include mobileMaxBreakPoint {
+      height: 30px;
+      padding: 0 8px 0 12px;
+      font-size: 13px;
+    }
+    img {
+      width: 15px;
+    }
+  }
+}
+.describe {
+  position: relative;
+  background-color: $secondaryColor;
+  color: $textColor;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 30px 0 30px 20px;
+  @include mobileMaxBreakPoint {
+    font-size: 12px;
+  }
+}
