@@ -29,17 +29,12 @@ const Home = () => {
               <p>Chargement...</p>
             ) : (
               accomodations.map((accomodation) => (
-                <Cards
-                  title={accomodation.title}
-                  id={accomodation.id}
-                  cover={accomodation.cover}
-                  key={accomodation.id}
-                />
+                <Cards key={accomodation.id} {...accomodation} />
               ))
             )}
           </ul>
         ) : (
-          <p>{error}</p>
+          <p className={styles.error}>{error}</p>
         )}
       </section>
     </main>

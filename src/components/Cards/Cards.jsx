@@ -1,14 +1,14 @@
 import styles from './cards.module.scss'
 import { Link } from 'react-router-dom'
 
-const Cards = (props) => {
+const Cards = ({ id, title, cover }) => {
   return (
-    <li key={props.id}>
+    <li key={id}>
       <figure className={styles.card}>
-        <Link to={`/accomodation/${props.id}`}>
-          <img src={props.cover} alt={props.title} />
+        <Link to={`/accomodation/${id}`}>
+          <img src={cover} alt={title} />
           <figcaption className={styles['card_title']}>
-            <h2>{props.title}</h2>
+            <h2>{title}</h2>
           </figcaption>
         </Link>
       </figure>
