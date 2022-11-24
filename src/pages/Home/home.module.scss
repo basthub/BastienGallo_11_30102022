@@ -1,0 +1,41 @@
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/variables';
+
+.accomodations {
+  &-container {
+    background-color: $secondaryColor;
+    max-width: 1240px;
+    margin: auto;
+    border-radius: 25px;
+    @include mobileMaxBreakPoint {
+      background-color: transparent;
+      width: 100%;
+      padding: unset;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 48px;
+    }
+  }
+  &-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include mobileMaxBreakPoint {
+      width: 100;
+      display: block;
+    }
+  }
+}
+.error {
+  color: $textColor;
+  font-size: 36px;
+  margin: 180px auto;
+  text-align: center;
+  background-color: #fff;
+  @include mobileMaxBreakPoint {
+    font-size: 18px;
+    margin-bottom: 135px;
+  }
+}

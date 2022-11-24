@@ -1,0 +1,119 @@
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/variables';
+
+.accomodation {
+  > section {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .mainDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    @include mobileMaxBreakPoint {
+      flex-direction: column;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      @include mobileMaxBreakPoint {
+        align-items: flex-start;
+        gap: 12px;
+      }
+    }
+    > :nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: flex-end;
+      @include mobileMaxBreakPoint {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    h1 {
+      color: $primaryColor;
+      font-weight: 500;
+      font-size: 36px;
+      margin: 8px auto;
+      @include mobileMaxBreakPoint {
+        font-size: 18px;
+      }
+    }
+    h2 {
+      color: $primaryColor;
+      font-weight: 500;
+      font-size: 18px;
+      @include mobileMaxBreakPoint {
+        font-size: 14px;
+      }
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    &_host {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 0;
+      @include mobileMaxBreakPoint {
+        align-items: center;
+      }
+      p {
+        width: 93px;
+        text-align: end;
+        color: $textColor;
+        font-weight: 500;
+        font-size: 18px;
+        margin: auto;
+        @include mobileMaxBreakPoint {
+          font-size: 14px;
+        }
+      }
+      img {
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+      }
+    }
+
+    &_rating {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      max-width: 200px;
+      margin: 5px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        @include mobileMaxBreakPoint {
+          width: 15px;
+          height: 15px;
+          margin: 2.5px;
+        }
+      }
+    }
+  }
+  .subDetails {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 75px;
+    @include mobileMaxBreakPoint {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
