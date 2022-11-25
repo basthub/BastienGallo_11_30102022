@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import Carousel from '../../components/Carousel/Carousel'
 import Dropdown from '../../components/DropDown/Dropdown'
 import Tags from '../../components/Tags/Tags'
@@ -21,14 +21,10 @@ const Accomodation = () => {
         )
         matchingAccomodationId
           ? setAccomodation(matchingAccomodationId)
-          : setError(
-              `Erreur : Aucun logement ne correspond à l'id ${accomodationId}`
-            )
+          : setError(<Navigate to="/404/" />)
       })
 
-      .catch((err) =>
-        setError(`Erreur lors de la récupération du logement : ${err.message}`)
-      )
+      .catch((err) => setError(true))
       .finally(() => setIsLoading(false))
   }, [accomodationId])
 
@@ -90,7 +86,7 @@ const Accomodation = () => {
           </div>
         </section>
       ) : (
-        <p>{error}</p>
+        <div>{error}</div>
       )}
     </main>
   )

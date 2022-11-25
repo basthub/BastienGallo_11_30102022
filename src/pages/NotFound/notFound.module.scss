@@ -6,8 +6,11 @@
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
-  margin: 40px 0;
+  margin: 80px 0;
   color: $textColor;
+  @include mobileMaxBreakPoint {
+    margin-top: 130px;
+  }
   & p,
   Link {
     flex-basis: 100%;
