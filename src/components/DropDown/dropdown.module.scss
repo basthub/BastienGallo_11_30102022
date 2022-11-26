@@ -38,6 +38,7 @@
   font-weight: 400;
   font-size: 18px;
   padding: 30px 0 30px 20px;
+  border-radius: 0 0 5px 5px;
   @include mobileMaxBreakPoint {
     font-size: 12px;
   }
