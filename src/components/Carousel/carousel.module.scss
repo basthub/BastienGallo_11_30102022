@@ -4,7 +4,7 @@
 .carousel {
   div[role='option'] {
     max-width: 100%;
-    height: 367px;
+    height: 415px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -18,11 +18,15 @@
       border-radius: 10px;
       height: 255px;
       gap: 80px;
+      justify-content: center;
     }
   }
   p {
     color: $textLightColor;
     font-weight: 500;
+    @include mobileMaxBreakPoint {
+      display: none;
+    }
   }
 }
 .arrows {

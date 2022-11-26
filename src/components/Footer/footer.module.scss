@@ -3,12 +3,20 @@
 
 .footer {
   width: 100%;
+  height: 209px;
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   background-color: $footerColor;
+  margin-top: 40px;
+
+  @include mobileMaxBreakPoint {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
   img {
     height: 40px;
     margin-top: 65px;
